@@ -33,7 +33,7 @@ return {
 
 
 			local function footer()
-				return "(2025) Config by Daniele Turazzini - v2.0"
+				return "(2026) Config by Daniele Turazzini - v2.0"
 			end
 
 			dashboard.section.footer.val = footer()
