@@ -25,22 +25,22 @@ return {
 			local theme = {
 				normal = {
 					a = { fg = colors.black, bg = colors.blue },
-					b = { fg = colors.light_violet, bg = colors.grey },
+					b = { fg = colors.light_violet, bg = "None" },
 					z = { fg = colors.black, bg = colors.blue },
 				},
 				insert = {
 					a = { fg = colors.black, bg = colors.green },
-					b = { fg = colors.green, bg = colors.grey },
+					b = { fg = colors.green, bg = "None" },
 					z = { fg = colors.black, bg = colors.green },
 				},
 				visual = {
 					a = { fg = colors.black, bg = colors.pink },
-					b = { fg = colors.pink, bg = colors.grey },
+					b = { fg = colors.pink, bg = "None" },
 					z = { fg = colors.black, bg = colors.pink },
 				},
 				replace = {
 					a = { fg = colors.black, bg = colors.yellow },
-					b = { fg = colors.yellow, bg = colors.grey },
+					b = { fg = colors.yellow, bg = "None" },
 					z = { fg = colors.black, bg = colors.yellow },
 				},
 			}
@@ -59,7 +59,7 @@ return {
 				for name, section in pairs(sections) do
 					local left = name:sub(9, 10) < 'x'
 					for pos = 1, name ~= 'lualine_z' and #section or #section - 1 do
-						table.insert(section, pos * 2, { empty, color = { fg = colors.white, bg = colors.white } })
+						table.insert(section, pos * 2, { empty, color = { fg = "None", bg = "None" } })
 					end
 					for id, comp in ipairs(section) do
 						if type(comp) ~= 'table' then
